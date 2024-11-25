@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player - Reprodutor de Música</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.min.js"></script>
+    <link rel="shortcut icon" href="music.png" type="image/x-icon">
+</head>
+<body>
+    <div class="main-content">
+        <div class="player">
+            <div class="title">
+                <h1>Reprodutor de Música</h1>
+                <p>criador por <strong>Vinícius Silva Lopes</strong></p>
+            </div>
+            <div class="cover-container">
+                <img id="music-cover" src="Disco Ultralounge.png" alt="Capa da Música" class="music-cover">
+            </div>
+            <div id="music-title" class="music-title"><strong>Nome da Música</strong></div>
+            <div id="music-artist" class="music-artist">Artista da Música</div>
+            <audio id="audio-player" src="Local Forecast - Elevator.mp3"></audio>
+            <div id="lyrics-container" class="lyrics-container hidden">
+                <pre id="lyrics-text"></pre>
+            </div>
+            <div class="progress-container">
+                <input type="range" id="progress-bar" value="0" min="0" max="100">
+                <span id="current-time">00:00</span><span id="total-time">00:00</span>
+            </div>
+            <div class="controls">
+                <button id="prev-btn">
+                    <i class="fas fa-backward"></i>
+                </button>
+                <button id="play-pause-btn">
+                    <i class="fas fa-play"></i>
+                </button>
+                <button id="next-btn">
+                    <i class="fas fa-forward"></i>
+                </button>
+            </div>
+            <input type="range" id="volume-control" min="0" max="1" step="0.1" value="1">
+        </div>
+        <div class="playlist-container">
+            <h3>Playlist</h3>
+            <ul id="playlist"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
